@@ -11,6 +11,9 @@ mongoose.connect('mongodb://mongo/apinode');
 server.use(express.urlencoded());
 server.use(express.json());
 
+const cors = require('cors');
+server.use(cors());
+
 const postRoute = require("./routes/postRoute");
 postRoute(server);
 
